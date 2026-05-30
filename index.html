@@ -49,6 +49,8 @@
     /* esconde a barra de rolagem do carrossel */
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     .no-scrollbar::-webkit-scrollbar { display: none; }
+    /* compensa o header fixo ao navegar por âncoras (#servicos, #sobre, etc.) */
+    [id] { scroll-margin-top: 7rem; }
   </style>
 
   <!-- SEO / Social (Open Graph + Twitter) -->
@@ -146,7 +148,7 @@
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" class="hidden md:inline-flex bg-comandoYellow text-black px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Chamar no WhatsApp</a>
+        <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="hidden md:inline-flex bg-comandoYellow text-black px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Chamar no WhatsApp</a>
 
         <!-- Mobile menu button -->
         <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden p-2 rounded bg-white/5">
@@ -181,7 +183,7 @@
           <p class="mt-4 text-gray-300">Na Comando Auto Center você encontra mecânica completa, suspensão, alinhamento, balanceamento, injeção eletrônica e troca de óleo — serviço rápido, transparente e com garantia.</p>
 
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-comandoYellow text-black px-5 py-3 rounded-lg font-semibold shadow transition hover:scale-95">Solicitar orçamento</a>
+            <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-comandoYellow text-black px-5 py-3 rounded-lg font-semibold shadow transition hover:scale-105">Solicitar orçamento</a>
             <a href="#servicos" class="inline-flex items-center justify-center border border-white/10 px-5 py-3 rounded-lg text-white hover:bg-white/5">Ver serviços</a>
           </div>
 
@@ -440,7 +442,7 @@
           <h5 class="font-bold">Contato</h5>
           <p class="text-gray-300 mt-2">WhatsApp: <a class="text-comandoYellow" href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center.">+55 64 99207-1136</a></p>
           <!-- <p class="text-gray-300 mt-1">Zap adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p> -->
-          <p class="text-gray-300 mt-1">Instagram: <a class="text-comandoYellow" href="https://www.instagram.com/comandoautocenter10/" target="_blank">@comandoautocenter10</a></p>
+          <p class="text-gray-300 mt-1">Instagram: <a class="text-comandoYellow" href="https://www.instagram.com/comandoautocenter10/" target="_blank" rel="noopener noreferrer">@comandoautocenter10</a></p>
         </div>
 
         <div>
@@ -464,7 +466,7 @@
   <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center."
      target="_blank" rel="noopener noreferrer"
      aria-label="Conversar no WhatsApp"
-     class="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition focus:outline-none">
+     class="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition">
     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/>
     </svg>
