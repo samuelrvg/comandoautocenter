@@ -15,9 +15,10 @@
       theme: {
         extend: {
           colors: {
-            comandoRed: '#C8102E',
+            // adjusted to match `logo.jpeg` colors
+            comandoRed: '#E21B23',
             comandoYellow: '#FFD200',
-            comandoBlack: '#0B0B0B'
+            comandoBlack: '#000000'
           }
         }
       }
@@ -34,6 +35,14 @@
     .stripe { background: linear-gradient(135deg, rgba(200,16,30,0.9) 0%, rgba(255,210,0,0.9) 50%, rgba(0,0,0,0.0) 50%); }
     /* subtle card border */
     .card-border { box-shadow: 0 6px 20px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.03); }
+    /* Visible focus for keyboard users */
+    :focus {
+      outline: 3px solid rgba(255,210,0,0.95);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+    /* logo adjustments */
+    .logo-img { mix-blend-mode: normal; }
   </style>
 
   <!-- SEO / Social -->
@@ -75,15 +84,11 @@
   <header class="fixed w-full z-40 bg-gradient-to-b from-black/90 via-black/70 to-transparent">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <a href="#home" class="flex items-center gap-3" aria-label="Comando Auto Center">
-        <div class="w-12 h-12 bg-gradient-to-r from-comandoRed to-comandoYellow flex items-center justify-center rounded-md shadow-lg">
-          <!-- simple logo mark -->
-          <svg width="36" height="20" viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-            <rect width="36" height="20" rx="3" fill="#000"/>
-            <path d="M0 0h6v6H0zM6 6h6v6H6zM12 0h6v6h-6zM18 6h6v6h-6z" fill="#fff" opacity="0.9"/>
-          </svg>
-        </div>
-        <div>
-          <!-- Use non-heading element here to keep a single H1 in the page (hero) -->
+        <picture>
+          <source srcset="logo.png" type="image/png">
+          <img src="logo.jpeg" alt="Logo Comando Auto Center" class="h-12 sm:h-14 object-contain logo-img" />
+        </picture>
+        <div class="hidden sm:block">
           <span class="text-lg font-bold">Comando Auto Center</span>
           <p class="text-xs text-gray-300 -mt-1">Caldas Novas - GO</p>
         </div>
@@ -137,7 +142,7 @@
             <a href="#servicos" class="inline-flex items-center justify-center border border-white/10 px-5 py-3 rounded-lg text-white hover:bg-white/5">Ver serviços</a>
           </div>
 
-          <div class="mt-6 text-sm text-gray-400">Telefone/WhatsApp: <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="text-comandoYellow">+55 64 9207-1136</a></div>
+          <!-- <div class="mt-6 text-sm text-gray-400">Telefone/WhatsApp: <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="text-comandoYellow">+55 64 9207-1136</a></div> -->
         </div>
 
         <!-- Visual / Illustration -->
@@ -280,7 +285,7 @@
         </div>
 
         <div class="rounded-xl overflow-hidden card-border">
-          <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Oficina" class="w-full h-56 object-cover grayscale contrast-95/80"/>
+          <img src="carro.jpg" alt="Carro" class="w-full h-65 object-cover grayscale contrast-95/80"/>
         </div>
       </div>
     </section>
@@ -294,7 +299,7 @@
         </div>
         <div class="flex gap-3">
           <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="bg-black text-comandoYellow px-5 py-3 rounded-lg font-bold">Chamar no WhatsApp</a>
-          <a href="https://wa.me/5562997001841" target="_blank" rel="noopener noreferrer" class="bg-black text-comandoYellow px-5 py-3 rounded-lg font-bold">Zap adicional</a>
+          <!-- <a href="https://wa.me/5562997001841" target="_blank" rel="noopener noreferrer" class="bg-black text-comandoYellow px-5 py-3 rounded-lg font-bold">Zap adicional</a> -->
         </div>
       </div>
     </section>
@@ -306,8 +311,8 @@
 
       <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="rounded-lg overflow-hidden card-border">
-          <!-- Map iframe; replaces well with an embed key if required -->
-          <iframe class="w-full h-64 border-0" loading="lazy" src="https://www.google.com/maps?q=Jardim+dos+Turistas+Caldas+Novas+GO&output=embed" referrerpolicy="no-referrer-when-downgrade" title="Mapa - Jardim dos Turistas, Caldas Novas"></iframe>
+          <!-- Mapa com localização exata da Comando Auto Center -->
+          <iframe class="w-full h-64 border-0" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d949.9689799060419!2d-48.6210447!3d-17.7504847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94a7314841672c43%3A0xf13a40b15e10c4a2!2sComando%20Auto%20Center!5e0!3m2!1spt-BR!2sbr!4v1779140073212!5m2!1spt-BR!2sbr" referrerpolicy="no-referrer-when-downgrade" title="Mapa - Comando Auto Center, Caldas Novas"></iframe>
         </div>
 
         <div class="flex flex-col justify-between">
@@ -315,7 +320,7 @@
             <h4 class="font-semibold">Endereço</h4>
             <p class="text-gray-300 mt-2">Jardim dos Turistas, Caldas Novas - GO, 75690-000</p>
             <p class="text-gray-300 mt-2">Telefone/WhatsApp principal: <a class="text-comandoYellow" href="https://wa.me/556492071136">+55 64 9207-1136</a></p>
-            <p class="text-gray-300 mt-1">WhatsApp adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p>
+            <!-- <p class="text-gray-300 mt-1">WhatsApp adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p> -->
           </div>
 
           <div class="mt-4">
@@ -337,7 +342,7 @@
         <div>
           <h5 class="font-bold">Contato</h5>
           <p class="text-gray-300 mt-2">WhatsApp: <a class="text-comandoYellow" href="https://wa.me/556492071136">+55 64 9207-1136</a></p>
-          <p class="text-gray-300 mt-1">Zap adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p>
+          <!-- <p class="text-gray-300 mt-1">Zap adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p> -->
           <p class="text-gray-300 mt-1">Instagram: <a class="text-comandoYellow" href="https://www.instagram.com/comandoautocenter10/" target="_blank">@comandoautocenter10</a></p>
         </div>
 
@@ -359,8 +364,10 @@
   </main>
 
   <script>
-    // set year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // set copyright year range
+    const startYear = 2017;
+    const currentYear = new Date().getFullYear();
+    document.getElementById('year').textContent = currentYear > startYear ? `${startYear}–${currentYear}` : `${startYear}`;
 
     // mobile menu toggle (updates aria-expanded)
     const menuBtn = document.getElementById('menuBtn');
