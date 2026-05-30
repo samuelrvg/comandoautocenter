@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Estilos customizados (antes inline no <style> do index.html) ===== */
+html { scroll-behavior: smooth; }
+body { background: linear-gradient(180deg, #050505 0%, #0b0b0b 100%); }
+
+/* Diagonal stripe accent */
+.stripe { background: linear-gradient(135deg, rgba(200,16,30,0.9) 0%, rgba(255,210,0,0.9) 50%, rgba(0,0,0,0.0) 50%); }
+
+/* subtle card border */
+.card-border { box-shadow: 0 6px 20px rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.03); }
+
+/* Visible focus for keyboard users */
+:focus {
+  outline: 3px solid rgba(255,210,0,0.95);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* logo adjustments */
+.logo-img { mix-blend-mode: normal; }
+
+/* esconde a barra de rolagem do carrossel */
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* compensa o header fixo ao navegar por âncoras (#servicos, #sobre, etc.) */
+[id] { scroll-margin-top: 7rem; }
