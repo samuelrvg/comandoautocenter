@@ -240,7 +240,10 @@
         <!-- Visual / foto -->
         <div class="md:w-6/12 relative">
           <div class="rounded-xl overflow-hidden card-border relative">
-            <img src="carro.jpg" alt="Carro em manutenção na oficina Comando Auto Center" width="700" height="400" fetchpriority="high" class="w-full h-60 md:h-72 object-cover" />
+            <picture>
+              <source srcset="carro.webp" type="image/webp">
+              <img src="carro.jpg" alt="Carro em manutenção na oficina Comando Auto Center" width="700" height="400" fetchpriority="high" class="w-full h-60 md:h-72 object-cover" />
+            </picture>
             <!-- faixa diagonal de velocidade sobre a foto -->
             <div class="absolute inset-0 stripe opacity-20 mix-blend-screen pointer-events-none"></div>
           </div>
@@ -362,7 +365,10 @@
         </div>
 
         <div class="rounded-xl overflow-hidden card-border relative">
-          <img src="fachada.jpg" alt="Fachada da Comando Auto Center em Caldas Novas" loading="lazy" width="800" height="600" class="w-full h-75 object-cover "/>
+          <picture>
+            <source srcset="fachada.webp" type="image/webp">
+            <img src="fachada.jpg" alt="Fachada da Comando Auto Center em Caldas Novas" loading="lazy" width="800" height="600" class="w-full h-75 object-cover "/>
+          </picture>
         </div>
       </div>
     </section>
