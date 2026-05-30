@@ -2,7 +2,7 @@
 
 Landing page institucional da **Comando Auto Center**, oficina mecânica e auto center em Caldas Novas - GO. O foco do site é **conversão**: apresentar os serviços de forma clara e levar o visitante ao WhatsApp.
 
-🔗 **Produção:** https://comandoautocenter.com/
+🔗 **Produção:** https://www.comandoautocenter.com/
 
 ---
 
@@ -111,9 +111,9 @@ O projeto é detectado automaticamente como site estático (sem build).
 3. Mantenha as configurações padrão → **Deploy**.
 
 > **Importante:** as tags `canonical`, `og:url` e `og:image` apontam para
-> `https://comandoautocenter.com`. Conecte esse domínio ao projeto em
-> **Settings → Domains** para que o cartão de compartilhamento e o SEO funcionem
-> corretamente.
+> `https://www.comandoautocenter.com` (versão **com www**, que é o domínio primário
+> e para onde a versão sem www redireciona). Mantenha `www` como domínio primário em
+> **Settings → Domains** para que canonical, compartilhamento e SEO fiquem consistentes.
 
 > **CSS no deploy:** o `vercel.json` já define o build (`npm run build:css`) e o
 > output (`.`), então a Vercel **gera o `styles.css` automaticamente** a cada deploy

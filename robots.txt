@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://comandoautocenter.com/sitemap.xml
+Sitemap: https://www.comandoautocenter.com/sitemap.xml
