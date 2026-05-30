@@ -6,7 +6,13 @@
   <title>Comando Auto Center — Oficina mecânica em Caldas Novas</title>
   <meta name="description" content="Comando Auto Center — Oficina e Auto Center em Caldas Novas. Mecânica, suspensão, injeção eletrônica, alinhamento, balanceamento e troca de óleo. Fale pelo WhatsApp.">
   <meta name="keywords" content="Oficina mecânica em Caldas Novas, Auto center em Caldas Novas, Alinhamento Caldas Novas, Balanceamento Caldas Novas, Troca de óleo Caldas Novas, Suspensão automotiva Caldas Novas">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#E21B23">
   <link rel="canonical" href="https://comandoautocenter.com/">
+
+  <!-- Favicon (usa a logo) -->
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="logo.png">
 
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,7 +21,7 @@
       theme: {
         extend: {
           colors: {
-            // adjusted to match `logo.jpeg` colors
+            // adjusted to match `logo.png` colors
             comandoRed: '#E21B23',
             comandoYellow: '#FFD200',
             comandoBlack: '#000000'
@@ -43,12 +49,24 @@
     }
     /* logo adjustments */
     .logo-img { mix-blend-mode: normal; }
+    /* esconde a barra de rolagem do carrossel */
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
   </style>
 
-  <!-- SEO / Social -->
+  <!-- SEO / Social (Open Graph + Twitter) -->
   <meta property="og:title" content="Comando Auto Center — Oficina em Caldas Novas">
   <meta property="og:description" content="Mecânica, suspensão, injeção eletrônica, alinhamento, balanceamento e troca de óleo em Caldas Novas. Fale pelo WhatsApp.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://comandoautocenter.com/">
+  <meta property="og:image" content="https://comandoautocenter.com/logo.png">
+  <meta property="og:image:alt" content="Logo Comando Auto Center">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Comando Auto Center">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comando Auto Center — Oficina em Caldas Novas">
+  <meta name="twitter:description" content="Mecânica, suspensão, injeção eletrônica, alinhamento, balanceamento e troca de óleo em Caldas Novas. Fale pelo WhatsApp.">
+  <meta name="twitter:image" content="https://comandoautocenter.com/logo.png">
 
   <!-- JSON-LD Local Business for SEO local -->
   <script type="application/ld+json">
@@ -56,8 +74,10 @@
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": "Comando Auto Center",
+    "image": "https://comandoautocenter.com/logo.png",
     "url": "https://comandoautocenter.com/",
-    "telephone": "+556492071136",
+    "telephone": "+5564992071136",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jardim dos Turistas",
@@ -66,6 +86,27 @@
       "postalCode": "75690-000",
       "addressCountry": "BR"
     },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -17.7504847,
+      "longitude": -48.6210447
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Caldas Novas" },
+      { "@type": "City", "name": "Rio Quente" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mecânica em geral" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Suspensão" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Injeção eletrônica" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Alinhamento" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balanceamento" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Troca de óleo" } }
+      ]
+    },
     "openingHoursSpecification": [
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "12:00" }
@@ -73,6 +114,16 @@
     "sameAs": ["https://www.instagram.com/comandoautocenter10/"]
   }
   </script>
+
+  <!-- Google Analytics 4 — descomente e troque G-XXXXXXXXXX pelo seu ID de medição
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 
 </head>
 <body class="text-white font-sans leading-normal antialiased">
@@ -83,15 +134,8 @@
   <!-- Header / Nav -->
   <header class="fixed w-full z-40 bg-gradient-to-b from-black/90 via-black/70 to-transparent">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#home" class="flex items-center gap-3" aria-label="Comando Auto Center">
-        <picture>
-          <source srcset="logo.png" type="image/png">
-          <img src="logo.jpeg" alt="Logo Comando Auto Center" class="h-12 sm:h-14 object-contain logo-img" />
-        </picture>
-        <div class="hidden sm:block">
-          <span class="text-lg font-bold">Comando Auto Center</span>
-          <p class="text-xs text-gray-300 -mt-1">Caldas Novas - GO</p>
-        </div>
+      <a href="#home" class="flex items-center" aria-label="Comando Auto Center">
+        <img src="logo.png" width="800" height="249" alt="Logo Comando Auto Center" class="h-20 w-auto object-contain logo-img" />
       </a>
 
       <nav class="hidden md:flex items-center gap-6">
@@ -99,12 +143,13 @@
         <a href="#servicos" class="hover:text-comandoYellow">Serviços</a>
         <a href="#sobre" class="hover:text-comandoYellow">Sobre</a>
         <a href="#diferenciais" class="hover:text-comandoYellow">Diferenciais</a>
+        <a href="#depoimentos" class="hover:text-comandoYellow">Depoimentos</a>
         <a href="#localizacao" class="hover:text-comandoYellow">Localização</a>
         <a href="#contato" class="hover:text-comandoYellow">Contato</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/556492071136" target="_blank" class="hidden md:inline-flex bg-comandoYellow text-black px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Chamar no WhatsApp</a>
+        <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" class="hidden md:inline-flex bg-comandoYellow text-black px-4 py-2 rounded-full font-semibold shadow hover:opacity-95">Chamar no WhatsApp</a>
 
         <!-- Mobile menu button -->
         <button id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden p-2 rounded bg-white/5">
@@ -119,9 +164,10 @@
         <a href="#servicos" class="py-2 border-b border-white/5">Serviços</a>
         <a href="#sobre" class="py-2 border-b border-white/5">Sobre</a>
         <a href="#diferenciais" class="py-2 border-b border-white/5">Diferenciais</a>
+        <a href="#depoimentos" class="py-2 border-b border-white/5">Depoimentos</a>
         <a href="#localizacao" class="py-2 border-b border-white/5">Localização</a>
         <a href="#contato" class="py-2">Contato</a>
-          <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex bg-comandoYellow text-black px-4 py-2 rounded-full font-semibold">Chamar no WhatsApp</a>
+          <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="mt-2 inline-flex bg-comandoYellow text-black px-4 py-2 rounded-full font-semibold">Chamar no WhatsApp</a>
       </div>
     </div>
   </header>
@@ -130,7 +176,7 @@
 
     <!-- Hero -->
     <section class="relative overflow-hidden">
-      <div class="absolute inset-0 stripe opacity-8 -z-10 transform -rotate-3"></div>
+      <div class="absolute inset-0 stripe opacity-10 -z-10 transform -rotate-3"></div>
       <div class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col md:flex-row items-center gap-6">
         <div class="md:w-6/12">
           <h2 class="text-comandoYellow font-bold uppercase tracking-wider">Oficina e Auto Center</h2>
@@ -138,34 +184,19 @@
           <p class="mt-4 text-gray-300">Na Comando Auto Center você encontra mecânica completa, suspensão, alinhamento, balanceamento, injeção eletrônica e troca de óleo — serviço rápido, transparente e com garantia.</p>
 
           <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-comandoYellow text-black px-5 py-3 rounded-lg font-semibold shadow hover:scale-99">Solicitar orçamento</a>
+            <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-comandoYellow text-black px-5 py-3 rounded-lg font-semibold shadow transition hover:scale-95">Solicitar orçamento</a>
             <a href="#servicos" class="inline-flex items-center justify-center border border-white/10 px-5 py-3 rounded-lg text-white hover:bg-white/5">Ver serviços</a>
           </div>
 
-          <!-- <div class="mt-6 text-sm text-gray-400">Telefone/WhatsApp: <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="text-comandoYellow">+55 64 9207-1136</a></div> -->
+          <!-- <div class="mt-6 text-sm text-gray-400">Telefone/WhatsApp: <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="text-comandoYellow">+55 64 99207-1136</a></div> -->
         </div>
 
-        <!-- Visual / Illustration -->
+        <!-- Visual / foto -->
         <div class="md:w-6/12 relative">
-          <div class="bg-gradient-to-br from-black/60 to-transparent rounded-xl p-6 card-border">
-            <!-- stylized car + speed lines -->
-            <svg viewBox="0 0 700 400" class="w-full h-60 md:h-72" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <linearGradient id="g1" x1="0" x2="1">
-                  <stop offset="0%" stop-color="#C8102E"/>
-                  <stop offset="70%" stop-color="#FFD200"/>
-                </linearGradient>
-              </defs>
-              <rect width="700" height="400" fill="transparent"></rect>
-              <g fill="none" stroke="url(#g1)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M40 300 Q180 160 340 280 T660 300" opacity="0.12"></path>
-                <path d="M50 260 Q200 140 360 260 T670 260" opacity="0.08"></path>
-              </g>
-              <g transform="translate(70,140) scale(0.9)">
-                <path d="M120 30 L260 30 L320 60 L320 110 L260 140 L120 140 Q90 120 80 100 L60 80 Q40 60 60 40 L80 30 Z" fill="#111"/>
-                <path d="M160 60 L290 60" stroke="url(#g1)" stroke-width="4" opacity="0.9"/>
-              </g>
-            </svg>
+          <div class="rounded-xl overflow-hidden card-border relative">
+            <img src="carro.jpg" alt="Carro em manutenção na oficina Comando Auto Center" width="700" height="400" fetchpriority="high" class="w-full h-60 md:h-72 object-cover" />
+            <!-- faixa diagonal de velocidade sobre a foto -->
+            <div class="absolute inset-0 stripe opacity-20 mix-blend-screen pointer-events-none"></div>
           </div>
         </div>
       </div>
@@ -178,9 +209,9 @@
 
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Card template -->
-        <article class="p-6 rounded-xl bg-gradient-to-b from-white/2 to-white/3 card-border">
+        <article class="p-6 rounded-xl bg-gradient-to-b from-white/5 to-white/10 card-border transition hover:from-white/10 hover:to-white/15">
           <div class="flex items-center gap-4">
-            <svg data-lucide="settings" class="text-comandoYellow w-8 h-8"></svg>
+            <svg data-lucide="settings" class="text-comandoYellow w-8 h-8" aria-hidden="true"></svg>
             <div>
               <h4 class="font-semibold">Mecânica em Geral</h4>
               <p class="text-gray-300 text-sm mt-1">Manutenção preventiva e corretiva para manter o carro confiável.</p>
@@ -188,9 +219,9 @@
           </div>
         </article>
 
-        <article class="p-6 rounded-xl bg-gradient-to-b from-white/2 to-white/3 card-border">
+        <article class="p-6 rounded-xl bg-gradient-to-b from-white/5 to-white/10 card-border transition hover:from-white/10 hover:to-white/15">
           <div class="flex items-center gap-4">
-            <svg data-lucide="hard-drive" class="text-comandoYellow w-8 h-8"></svg>
+            <svg data-lucide="hard-drive" class="text-comandoYellow w-8 h-8" aria-hidden="true"></svg>
             <div>
               <h4 class="font-semibold">Suspensão</h4>
               <p class="text-gray-300 text-sm mt-1">Reparos, trocas de amortecedores e componentes, garantindo segurança.</p>
@@ -198,9 +229,9 @@
           </div>
         </article>
 
-        <article class="p-6 rounded-xl bg-gradient-to-b from-white/2 to-white/3 card-border">
+        <article class="p-6 rounded-xl bg-gradient-to-b from-white/5 to-white/10 card-border transition hover:from-white/10 hover:to-white/15">
           <div class="flex items-center gap-4">
-            <svg data-lucide="cpu" class="text-comandoYellow w-8 h-8"></svg>
+            <svg data-lucide="cpu" class="text-comandoYellow w-8 h-8" aria-hidden="true"></svg>
             <div>
               <h4 class="font-semibold">Injeção Eletrônica</h4>
               <p class="text-gray-300 text-sm mt-1">Diagnóstico preciso e reparos em sistemas eletrônicos do motor.</p>
@@ -208,9 +239,9 @@
           </div>
         </article>
 
-        <article class="p-6 rounded-xl bg-gradient-to-b from-white/2 to-white/3 card-border">
+        <article class="p-6 rounded-xl bg-gradient-to-b from-white/5 to-white/10 card-border transition hover:from-white/10 hover:to-white/15">
           <div class="flex items-center gap-4">
-            <svg data-lucide="sliders" class="text-comandoYellow w-8 h-8"></svg>
+            <svg data-lucide="sliders" class="text-comandoYellow w-8 h-8" aria-hidden="true"></svg>
             <div>
               <h4 class="font-semibold">Alinhamento</h4>
               <p class="text-gray-300 text-sm mt-1">Alinhamento preciso para estabilidade e desgaste uniforme dos pneus.</p>
@@ -218,9 +249,9 @@
           </div>
         </article>
 
-        <article class="p-6 rounded-xl bg-gradient-to-b from-white/2 to-white/3 card-border">
+        <article class="p-6 rounded-xl bg-gradient-to-b from-white/5 to-white/10 card-border transition hover:from-white/10 hover:to-white/15">
           <div class="flex items-center gap-4">
-            <svg data-lucide="disc" class="text-comandoYellow w-8 h-8"></svg>
+            <svg data-lucide="disc" class="text-comandoYellow w-8 h-8" aria-hidden="true"></svg>
             <div>
               <h4 class="font-semibold">Balanceamento</h4>
               <p class="text-gray-300 text-sm mt-1">Balanceamento completo para dirigir com conforto e segurança.</p>
@@ -228,9 +259,9 @@
           </div>
         </article>
 
-        <article class="p-6 rounded-xl bg-gradient-to-b from-white/2 to-white/3 card-border">
+        <article class="p-6 rounded-xl bg-gradient-to-b from-white/5 to-white/10 card-border transition hover:from-white/10 hover:to-white/15">
           <div class="flex items-center gap-4">
-            <svg data-lucide="droplet" class="text-comandoYellow w-8 h-8"></svg>
+            <svg data-lucide="droplet" class="text-comandoYellow w-8 h-8" aria-hidden="true"></svg>
             <div>
               <h4 class="font-semibold">Troca de Óleo</h4>
               <p class="text-gray-300 text-sm mt-1">Óleos e filtros de qualidade com troca e descarte responsável.</p>
@@ -245,27 +276,27 @@
       <div class="max-w-6xl mx-auto px-6">
         <h3 class="text-2xl font-bold">Por que escolher a Comando Auto Center?</h3>
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="p-5 rounded-lg bg-white/3 card-border">
+          <div class="p-5 rounded-lg bg-white/5 card-border">
             <h4 class="font-semibold">Atendimento rápido e direto</h4>
             <p class="text-gray-300 text-sm mt-2">Comunicação clara, orçamento objetivo e retorno rápido.</p>
           </div>
-          <div class="p-5 rounded-lg bg-white/3 card-border">
+          <div class="p-5 rounded-lg bg-white/5 card-border">
             <h4 class="font-semibold">Segurança do veículo</h4>
             <p class="text-gray-300 text-sm mt-2">Serviços essenciais focados na segurança e durabilidade do seu carro.</p>
           </div>
-          <div class="p-5 rounded-lg bg-white/3 card-border">
+          <div class="p-5 rounded-lg bg-white/5 card-border">
             <h4 class="font-semibold">Profissionais experientes</h4>
             <p class="text-gray-300 text-sm mt-2">Equipe qualificada com equipamentos modernos e diagnósticos precisos.</p>
           </div>
-          <div class="p-5 rounded-lg bg-white/3 card-border">
+          <div class="p-5 rounded-lg bg-white/5 card-border">
             <h4 class="font-semibold">Diagnóstico claro</h4>
             <p class="text-gray-300 text-sm mt-2">Explicamos as causas, opções e custos antes de executar qualquer serviço.</p>
           </div>
-          <div class="p-5 rounded-lg bg-white/3 card-border">
+          <div class="p-5 rounded-lg bg-white/5 card-border">
             <h4 class="font-semibold">Foco em qualidade</h4>
             <p class="text-gray-300 text-sm mt-2">Peças e procedimentos que priorizam confiabilidade e resultados duráveis.</p>
           </div>
-          <div class="p-5 rounded-lg bg-white/3 card-border">
+          <div class="p-5 rounded-lg bg-white/5 card-border">
             <h4 class="font-semibold">Localização em Caldas Novas</h4>
             <p class="text-gray-300 text-sm mt-2">Atendemos motoristas da cidade e região com horários acessíveis.</p>
           </div>
@@ -280,12 +311,81 @@
           <h3 class="text-2xl font-bold">Sobre a Comando Auto Center</h3>
           <p class="text-gray-300 mt-4">A Comando Auto Center atende motoristas de Caldas Novas e região com serviços de manutenção automotiva, buscando qualidade, transparência e segurança para cada cliente. Nossa missão é entregar soluções técnicas com comunicação direta, preços justos e resultados que você pode confiar.</p>
           <div class="mt-4">
-            <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-comandoYellow text-black px-4 py-2 rounded-lg font-semibold">Fale conosco no WhatsApp</a>
+            <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="inline-flex items-center bg-comandoYellow text-black px-4 py-2 rounded-lg font-semibold">Fale conosco no WhatsApp</a>
           </div>
         </div>
 
         <div class="rounded-xl overflow-hidden card-border">
-          <img src="carro.jpg" alt="Carro" class="w-full h-65 object-cover grayscale contrast-95/80"/>
+          <img src="carro.jpg" alt="Equipe da Comando Auto Center realizando manutenção" loading="lazy" width="700" height="400" class="w-full h-64 object-cover grayscale contrast-95"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Depoimentos / Prova social -->
+    <section id="depoimentos" class="bg-gradient-to-b from-black/70 to-black/80 py-14">
+      <div class="max-w-6xl mx-auto px-6">
+        <h3 class="text-2xl font-bold">O que dizem nossos clientes</h3>
+        <p class="text-gray-300 mt-2">A confiança de quem já passou pela Comando Auto Center.</p>
+
+        <!-- Carrossel de avaliações -->
+        <div class="relative mt-8 sm:px-14" role="region" aria-roledescription="carrossel" aria-label="Avaliações de clientes">
+          <ul id="reviewTrack" class="no-scrollbar flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 px-1">
+            <li class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[31%]">
+              <figure class="h-full p-6 rounded-xl bg-white/5 card-border flex flex-col">
+                <div class="flex gap-1 text-comandoYellow" aria-label="5 de 5 estrelas">★★★★★</div>
+                <blockquote class="text-gray-200 mt-3 text-sm flex-1">"Oficina muito boa, preço justo e bom atendimento. Sou de Brasília e tive que arrumar, graças a Deus encontrei eles."</blockquote>
+                <figcaption class="text-gray-400 text-sm mt-4"><span class="font-semibold text-gray-200">Gabriel Marques de Oliveira</span> · via Google</figcaption>
+              </figure>
+            </li>
+            <li class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[31%]">
+              <figure class="h-full p-6 rounded-xl bg-white/5 card-border flex flex-col">
+                <div class="flex gap-1 text-comandoYellow" aria-label="5 de 5 estrelas">★★★★★</div>
+                <blockquote class="text-gray-200 mt-3 text-sm flex-1">"Excelente serviço e atendimento. Fiz alinhamento e balanceamento, fui muito bem recepcionado e o atendimento foi bem rápido!"</blockquote>
+                <figcaption class="text-gray-400 text-sm mt-4"><span class="font-semibold text-gray-200">Murillo Miranda</span> · via Google</figcaption>
+              </figure>
+            </li>
+            <li class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[31%]">
+              <figure class="h-full p-6 rounded-xl bg-white/5 card-border flex flex-col">
+                <div class="flex gap-1 text-comandoYellow" aria-label="5 de 5 estrelas">★★★★★</div>
+                <blockquote class="text-gray-200 mt-3 text-sm flex-1">"Oficina muito organizada e com profissionais qualificados. Fiz troca de pneu, alinhamento e balanceamento e o resultado foi ótimo. Atendimento educado, preço justo e serviço de qualidade. Super recomendo!"</blockquote>
+                <figcaption class="text-gray-400 text-sm mt-4"><span class="font-semibold text-gray-200">Marilene Rodrigues</span> · via Google</figcaption>
+              </figure>
+            </li>
+            <li class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[31%]">
+              <figure class="h-full p-6 rounded-xl bg-white/5 card-border flex flex-col">
+                <div class="flex gap-1 text-comandoYellow" aria-label="5 de 5 estrelas">★★★★★</div>
+                <blockquote class="text-gray-200 mt-3 text-sm flex-1">"Excelente atendimento, desde o dono ao colaborador. O que me atraiu foi a honestidade quando cheguei falando de um problema no meu veículo. Família de Deus."</blockquote>
+                <figcaption class="text-gray-400 text-sm mt-4"><span class="font-semibold text-gray-200">Paulo Henrique</span> · via Google</figcaption>
+              </figure>
+            </li>
+            <li class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[31%]">
+              <figure class="h-full p-6 rounded-xl bg-white/5 card-border flex flex-col">
+                <div class="flex gap-1 text-comandoYellow" aria-label="5 de 5 estrelas">★★★★★</div>
+                <blockquote class="text-gray-200 mt-3 text-sm flex-1">"Realizei o alinhamento, balanceamento e rodízio dos pneus do meu Corolla Cross. Fiquei muito satisfeita! Fui muito bem atendida pelo Dorismar, extremamente honesto e profissional. Super indico!"</blockquote>
+                <figcaption class="text-gray-400 text-sm mt-4"><span class="font-semibold text-gray-200">Renata</span> · Local Guide · via Google</figcaption>
+              </figure>
+            </li>
+            <li class="snap-start shrink-0 w-[85%] sm:w-[46%] lg:w-[31%]">
+              <figure class="h-full p-6 rounded-xl bg-white/5 card-border flex flex-col">
+                <div class="flex gap-1 text-comandoYellow" aria-label="5 de 5 estrelas">★★★★★</div>
+                <blockquote class="text-gray-200 mt-3 text-sm flex-1">"Atendimento excelente do começo ao fim! A equipe do Comando Auto Center é extremamente profissional, atenciosa e transparente. Fui muito bem orientada."</blockquote>
+                <figcaption class="text-gray-400 text-sm mt-4"><span class="font-semibold text-gray-200">Amanda Peixoto</span> · via Google</figcaption>
+              </figure>
+            </li>
+          </ul>
+
+          <!-- Setas -->
+          <button type="button" id="reviewPrev" aria-label="Avaliação anterior" class="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full bg-comandoYellow text-black shadow-lg hover:scale-105 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" id="reviewNext" aria-label="Próxima avaliação" class="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full bg-comandoYellow text-black shadow-lg hover:scale-105 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+        <p class="text-gray-500 text-xs mt-3 sm:hidden">← Arraste para ver mais →</p>
+
+        <div class="mt-6">
+          <a href="https://www.google.com/maps/search/?api=1&query=Comando+Auto+Center+Caldas+Novas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-comandoYellow hover:underline">Ver avaliações no Google →</a>
         </div>
       </div>
     </section>
@@ -298,7 +398,7 @@
           <p class="mt-1">Fale agora com a Comando Auto Center e solicite seu orçamento.</p>
         </div>
         <div class="flex gap-3">
-          <a href="https://wa.me/556492071136" target="_blank" rel="noopener noreferrer" class="bg-black text-comandoYellow px-5 py-3 rounded-lg font-bold">Chamar no WhatsApp</a>
+          <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center." target="_blank" rel="noopener noreferrer" class="bg-black text-comandoYellow px-5 py-3 rounded-lg font-bold">Chamar no WhatsApp</a>
           <!-- <a href="https://wa.me/5562997001841" target="_blank" rel="noopener noreferrer" class="bg-black text-comandoYellow px-5 py-3 rounded-lg font-bold">Zap adicional</a> -->
         </div>
       </div>
@@ -319,7 +419,7 @@
           <div>
             <h4 class="font-semibold">Endereço</h4>
             <p class="text-gray-300 mt-2">Jardim dos Turistas, Caldas Novas - GO, 75690-000</p>
-            <p class="text-gray-300 mt-2">Telefone/WhatsApp principal: <a class="text-comandoYellow" href="https://wa.me/556492071136">+55 64 9207-1136</a></p>
+            <p class="text-gray-300 mt-2">Telefone/WhatsApp principal: <a class="text-comandoYellow" href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center.">+55 64 99207-1136</a></p>
             <!-- <p class="text-gray-300 mt-1">WhatsApp adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p> -->
           </div>
 
@@ -341,7 +441,7 @@
 
         <div>
           <h5 class="font-bold">Contato</h5>
-          <p class="text-gray-300 mt-2">WhatsApp: <a class="text-comandoYellow" href="https://wa.me/556492071136">+55 64 9207-1136</a></p>
+          <p class="text-gray-300 mt-2">WhatsApp: <a class="text-comandoYellow" href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center.">+55 64 99207-1136</a></p>
           <!-- <p class="text-gray-300 mt-1">Zap adicional: <a class="text-comandoYellow" href="https://wa.me/5562997001841">(62) 99700-1841</a></p> -->
           <p class="text-gray-300 mt-1">Instagram: <a class="text-comandoYellow" href="https://www.instagram.com/comandoautocenter10/" target="_blank">@comandoautocenter10</a></p>
         </div>
@@ -363,6 +463,16 @@
 
   </main>
 
+  <!-- Botão flutuante de WhatsApp -->
+  <a href="https://wa.me/5564992071136?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20na%20Comando%20Auto%20Center."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Conversar no WhatsApp"
+     class="fixed bottom-5 right-5 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-105 transition focus:outline-none">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.518 5.26l-.999 3.648 3.97-1.042 1.001.335zm6.586-5.354c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+    </svg>
+  </a>
+
   <script>
     // set copyright year range
     const startYear = 2017;
@@ -372,10 +482,61 @@
     // mobile menu toggle (updates aria-expanded)
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
+
+    function setMenu(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      menuBtn.setAttribute('aria-expanded', String(open));
+    }
+
     menuBtn.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('hidden') === false;
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      setMenu(mobileMenu.classList.contains('hidden'));
     });
+
+    // fecha o menu ao clicar em qualquer link
+    mobileMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenu(false));
+    });
+
+    // fecha o menu com a tecla Esc
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        setMenu(false);
+        menuBtn.focus();
+      }
+    });
+
+    // carrossel de avaliações
+    (function () {
+      const track = document.getElementById('reviewTrack');
+      const prev = document.getElementById('reviewPrev');
+      const next = document.getElementById('reviewNext');
+      if (!track || !prev || !next) return;
+
+      // largura de rolagem = largura do 1º card + o gap (gap-6 = 24px)
+      function step() {
+        const first = track.querySelector('li');
+        const gap = 24;
+        return first ? first.getBoundingClientRect().width + gap : track.clientWidth;
+      }
+
+      next.addEventListener('click', () => {
+        // se chegou ao fim, volta ao início
+        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: step(), behavior: 'smooth' });
+        }
+      });
+
+      prev.addEventListener('click', () => {
+        // se está no início, vai para o fim
+        if (track.scrollLeft <= 4) {
+          track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: -step(), behavior: 'smooth' });
+        }
+      });
+    })();
 
     // initialize lucide icons
     if (window.lucide) { lucide.createIcons(); }
